@@ -1,0 +1,18 @@
+name: irDeathHandler
+version: '${version}'
+main: dev.exiledddev.deathhandler.DeathHandlerPlugin
+api-version: '1.21.11'
+description: Deathbans and /immortal for recording sessions, with full vanilla selector support.
+author: exiledddev
+website: https://github.com/exiledddev/irDeathHandler
+# Load after Rename so its nickname is applied before deathbans read player names.
+softdepend: [Rename, TeamSplit, IRKit]
+
+# Commands are registered through Paper's Brigadier API, so there is no commands: section.
+permissions:
+  deathhandler.admin:
+    description: Use /deathban and /immortal.
+    default: op
+  deathhandler.exempt:
+    description: Never deathbanned (deaths are still logged).
+    default: false

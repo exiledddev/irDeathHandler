@@ -1,0 +1,23 @@
+# irDeathHandler configuration. Run /deathban reload after editing.
+
+# Whether deaths deathban players when the server starts for the first time. After that,
+# /deathban on|off decides and is remembered across restarts.
+deathbans-enabled: true
+
+# What a deathbanned player sees on the disconnect screen when they die and when they try to
+# rejoin. Everyone else only sees the normal "<name> left the game". MiniMessage format.
+kick-message: "<red>You died."
+
+# Drop a deathbanned player's inventory and XP even when the keepInventory gamerule is on.
+force-drops: true
+
+# Played to every online player when someone is deathbanned. Empty name = no sound.
+sound:
+  name: "minecraft:entity.wither.death"
+  volume: 1.0
+  pitch: 1.0
+
+immortal:
+  # The lowest health immortal players can reach (in half hearts; 2.0 = one heart) unless they
+  # hold a totem of undying.
+  min-health: 2.0
